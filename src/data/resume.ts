@@ -11,7 +11,7 @@ export const profile = {
   photo: "/profile.jpg",
   resumeUrl: "/resume.pdf",
   availability: "Available for freelance & full-time work",
-  focusAreas: ["Full Stack Web Apps", "Payments & Billing", "AI-Powered Products"],
+  focusAreas: ["Full Stack Web Apps", "Payments & Billing", "AI-Powered Products", "Independent Products"],
   summary: `Results-driven Full Stack Developer with 7+ years of experience designing, building, and maintaining scalable, responsive web applications end to end. I work across the stack — from pixel-perfect, accessible React interfaces down to the API design, database schema, and cloud infrastructure that supports them — and I care as much about how a product feels to use as I do about how it holds up in production.`,
   extendedSummary: `Over the course of my career I've moved from pure frontend work into full-stack ownership, which means I'm usually the person translating a business requirement into a working, secure, production-grade feature rather than just a component. That's included building Stripe payment workflows end to end — subscriptions, one-time payments, proration, and webhook-driven state reconciliation — as well as real-time systems using WebSockets and streaming APIs so users see live data without polling. I've designed push notification infrastructure and a scalable transactional email pipeline (built on Twilio and SendGrid) tuned for high deliverability, and I've integrated AI-powered features using the OpenAI/ChatGPT APIs, Google's Vertex AI, and LangGraph to orchestrate multi-step, stateful agent workflows rather than single-shot prompts. Whatever the feature, the throughline is the same: build it to survive contact with real users, real traffic, and real edge cases — with security, performance, and maintainability treated as requirements, not afterthoughts.`,
 };
@@ -147,9 +147,31 @@ export type Project = {
   tagline: string;
   description: string;
   highlights: string[];
+  featured?: boolean;
+  badge?: string;
+  links?: { web?: string; playStore?: string };
 };
 
 export const projects: Project[] = [
+  {
+    name: "Cricket Score Counter",
+    stack: "Web App & Android App",
+    tagline: "Self-built product — live cricket scoring, web & Play Store",
+    featured: true,
+    badge: "5.0★ on Google Play · 500+ installs",
+    description:
+      "An independent product I designed, built, and shipped end to end: a free live cricket scoring tool for street, club, school, and society matches. Score ball-by-ball, track runs, wickets, overs, and extras in real time, and share a live match link so teammates and spectators can follow along from anywhere — no login required to get started.",
+    highlights: [
+      "Ball-by-ball scoring with automatic run rate, partnerships, and batting/bowling stats.",
+      "Instant live match-link sharing for teammates and spectators to follow along in real time.",
+      "Optional login to save matches, resume half-finished games, and sync player rosters across browsers and devices.",
+      "Shipped as both a web app and a native Android app on Google Play, rated 5.0★ by local cricket players and organizers.",
+    ],
+    links: {
+      web: "https://cricket-score-counter.com",
+      playStore: "https://play.google.com/store/apps/details?id=com.cricketscorecounter.mobile",
+    },
+  },
   {
     name: "Insight Timer",
     stack: "React, Node, Stripe, GCP, BigQuery, Twilio, SendGrid",

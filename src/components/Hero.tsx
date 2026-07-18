@@ -7,7 +7,7 @@ import { profile } from "@/data/resume";
 
 const stats = [
   { label: "Years experience", value: profile.yearsExperience },
-  { label: "Shipped projects", value: "5+" },
+  { label: "Shipped projects", value: "6+" },
   { label: "Client focus", value: "Global" },
 ];
 
