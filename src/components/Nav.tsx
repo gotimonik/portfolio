@@ -1,31 +1,14 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import ThemeToggle from "./ThemeToggle";
-import { profile } from "@/data/resume";
-
-const links = [
-  { href: "#about", label: "About" },
-  { href: "#specializations", label: "Focus" },
-  { href: "#approach", label: "Approach" },
-  { href: "#experience", label: "Experience" },
-  { href: "#skills", label: "Skills" },
-  { href: "#projects", label: "Projects" },
-  { href: "#education", label: "Education" },
-  { href: "#contact", label: "Contact" },
-];
+import { navLinks, profile } from "@/data/resume";
+import { useScrolled } from "@/hooks/useScrolled";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
-    onScroll();
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  const scrolled = useScrolled();
 
   return (
     <header
@@ -46,7 +29,7 @@ export default function Nav() {
         </a>
 
         <ul className="hidden gap-7 md:flex">
-          {links.map((link) => (
+          {navLinks.map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
@@ -75,7 +58,7 @@ export default function Nav() {
 
       {open && (
         <ul className="flex flex-col gap-1 border-t border-border bg-background px-6 pb-4 md:hidden">
-          {links.map((link) => (
+          {navLinks.map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
