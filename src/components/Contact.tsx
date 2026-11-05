@@ -1,4 +1,4 @@
-import { Mail, Phone } from "lucide-react";
+import { Apple, Mail, Phone } from "lucide-react";
 import Section from "./Section";
 import Reveal from "./Reveal";
 import { GithubIcon, LinkedinIcon } from "./BrandIcons";
@@ -10,7 +10,7 @@ export default function Contact() {
       <Reveal className="max-w-2xl">
         <p className="text-base leading-relaxed text-muted">
           I&apos;m open to new opportunities and interesting projects. Feel free to
-          reach out via email or connect with me on LinkedIn / GitHub.
+          reach out via email, connect with me on LinkedIn / GitHub, or check out my apps on the App Store.
         </p>
         <div className="mt-6 flex flex-wrap gap-4">
           <a
@@ -28,7 +28,7 @@ export default function Contact() {
             {profile.phone}
           </a>
         </div>
-        <div className="mt-6 flex gap-6 text-sm">
+        <div className="mt-6 flex flex-wrap gap-6 text-sm">
           <a
             href={profile.linkedin}
             target="_blank"
@@ -46,6 +46,15 @@ export default function Contact() {
           >
             <GithubIcon className="h-4 w-4" />
             GitHub
+          </a>
+          <a
+            href={profile.appStore}
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-1.5 text-muted transition-colors hover:text-accent"
+          >
+            <Apple className="h-4 w-4" />
+            App Store
           </a>
         </div>
       </Reveal>

@@ -76,7 +76,7 @@ export default function RootLayout({
       "@type": "PostalAddress",
       addressRegion: profile.location,
     },
-    sameAs: [profile.linkedin, profile.github],
+    sameAs: [profile.linkedin, profile.github, profile.appStore],
     knowsAbout: profile.focusAreas,
   };
 

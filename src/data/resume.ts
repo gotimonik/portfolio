@@ -23,6 +23,7 @@ export const profile = {
   phone: "+91 8128313138",
   linkedin: "https://linkedin.com/in/monikgoti",
   github: "https://github.com/gotimonik",
+  appStore: "https://apps.apple.com/in/developer/monik-goti/id6819157610",
   yearsExperience: "7+",
   photo: "/profile.jpg",
   resumeUrl: "/resume.pdf",
@@ -165,14 +166,14 @@ export type Project = {
   highlights: string[];
   featured?: boolean;
   badge?: string;
-  links?: { web?: string; playStore?: string };
+  links?: { web?: string; playStore?: string; appStore?: string };
 };
 
 export const projects: Project[] = [
   {
     name: "Cricket Score Counter",
     stack: "Web App & Android App",
-    tagline: "Self-built product — live cricket scoring, web & Play Store",
+    tagline: "Self-built product — live cricket scoring, web, Google Play & App Store",
     featured: true,
     badge: "5.0★ on Google Play · 500+ installs",
     description:
@@ -181,11 +182,48 @@ export const projects: Project[] = [
       "Ball-by-ball scoring with automatic run rate, partnerships, and batting/bowling stats.",
       "Instant live match-link sharing for teammates and spectators to follow along in real time.",
       "Optional login to save matches, resume half-finished games, and sync player rosters across browsers and devices.",
-      "Shipped as both a web app and a native Android app on Google Play, rated 5.0★ by local cricket players and organizers.",
+      "Shipped as a web app and native mobile apps on Google Play and the App Store, rated 5.0★ on Google Play by local cricket players and organizers.",
     ],
     links: {
       web: "https://cricket-score-counter.com",
       playStore: "https://play.google.com/store/apps/details?id=com.cricketscorecounter.mobile",
+      appStore: "https://apps.apple.com/in/app/cricket-score-counter/id6819157368",
+    },
+  },
+  {
+    name: "MandalHisab",
+    stack: "Next.js 16, TypeScript, MongoDB Atlas, Capacitor, Vercel",
+    tagline: "Self-built product — Mandal finance app, web, Google Play & App Store",
+    description:
+      "A financial management platform for Mandals, trusts, societies, and community organizations — replacing paper registers and spreadsheets with one transparent system for member contributions (hapta), savings, loans, donations, expenses, and reports. Also includes a private Personal Hisab money book for individual users.",
+    highlights: [
+      "Multi-tenant organizations with admin, manager, and member roles, platform-admin approval, and an append-only audit log.",
+      "Double-entry ledger, gap-free receipt numbering, and reversal-only corrections — financial records are never deleted.",
+      "Interest engine (simple, compound, flat, reducing-balance), member loans (upad), withdrawal vouchers, and a cash book.",
+      "12 reports with CSV export, including trial balance and balance sheet, plus automated due-date reminders via daily cron jobs.",
+    ],
+    links: {
+      web: "https://mandal-hisab-frontend.vercel.app",
+      playStore: "https://play.google.com/store/apps/details?id=com.mandalhisab.app",
+      appStore: "https://apps.apple.com/in/app/mandalhisab-bachat-khata/id6827958501",
+    },
+  },
+  {
+    name: "Happy Kids Academy",
+    stack: "Next.js 16, React 19, TypeScript, Zustand, Capacitor",
+    tagline: "Self-built product — preschool learning app, web, Google Play & App Store",
+    description:
+      "A modern, accessible, offline-capable learning app for young children, rebuilt for the web from an original Android app and packaged for Android and iOS with Capacitor. Covers 13 learning categories — letters, numbers, math facts, shapes, colors, animals, birds, fruits, vegetables, vehicles, body parts, and Gujarati and Hindi alphabets.",
+    highlights: [
+      "Quizzes, games, writing practice, and a rewards system to keep kids engaged.",
+      "Parent dashboard with progress charts and a study coach.",
+      "Spoken pronunciation via the Web Speech API, audio chimes, and haptic feedback.",
+      "Works offline as a PWA, with progress saved locally — no account needed.",
+    ],
+    links: {
+      web: "https://happy-kids-academy.vercel.app",
+      playStore: "https://play.google.com/store/apps/details?id=com.happykids.academy",
+      appStore: "https://apps.apple.com/in/app/happy-kids-academy-abc-123/id6820455448",
     },
   },
   {

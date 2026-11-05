@@ -1,4 +1,4 @@
-import { Globe, Smartphone, Star } from "lucide-react";
+import { Apple, Globe, Smartphone, Star } from "lucide-react";
 import Section from "./Section";
 import Reveal from "./Reveal";
 import { projects } from "@/data/resume";
@@ -67,6 +67,17 @@ export default function Projects() {
                       >
                         <Smartphone className="h-3.5 w-3.5" />
                         Google Play
+                      </a>
+                    )}
+                    {project.links.appStore && (
+                      <a
+                        href={project.links.appStore}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex items-center gap-1.5 rounded-md border border-border px-3 py-1.5 text-xs font-medium text-foreground transition-colors hover:border-accent hover:text-accent"
+                      >
+                        <Apple className="h-3.5 w-3.5" />
+                        App Store
                       </a>
                     )}
                   </div>
