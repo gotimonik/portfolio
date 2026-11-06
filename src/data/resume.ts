@@ -175,7 +175,7 @@ export const projects: Project[] = [
     stack: "Web App & Android App",
     tagline: "Self-built product — live cricket scoring, web, Google Play & App Store",
     featured: true,
-    badge: "5.0★ on Google Play · 500+ installs",
+    badge: "5.0★ on Google Play · 5000+ installs",
     description:
       "An independent product I designed, built, and shipped end to end: a free live cricket scoring tool for street, club, school, and society matches. Score ball-by-ball, track runs, wickets, overs, and extras in real time, and share a live match link so teammates and spectators can follow along from anywhere — no login required to get started.",
     highlights: [
